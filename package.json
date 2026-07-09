@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "npx tailwindcss -i src/input.css -o dist/styles.css --minify",
+    "build": "npx tailwindcss -i src/input.css -o dist/styles.css --minify && cp index.html style.css script.js dist/ && cp -r public dist/",
     "watch": "npx tailwindcss -i src/input.css -o dist/styles.css --watch",
     "deploy": "wrangler pages deploy .",
     "preview": "wrangler pages dev ."
